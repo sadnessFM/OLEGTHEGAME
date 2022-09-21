@@ -9,6 +9,7 @@ namespace nynaynayyanyanynaynanyanynaynay
         public Bebra()
         {
             InitializeComponent();
+            textBox2.Text += cat.OutInfo();
         }
 
         private void button1_Click(object sender, EventArgs e)

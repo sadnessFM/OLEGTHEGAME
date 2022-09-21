@@ -32,7 +32,7 @@
             else
             {
                 Weight -= amount;
-                return $"котик покурил на {amount} тонн";
+                return $"котик антипоел на {amount} тонн";
             }
         }
 
@@ -40,7 +40,7 @@
 
         public string OutInfo() => $"{GetName()}, {GetAge()}, {GetGender()}, {GetWeight()} тонн";
 
-        public bool Check() => Weight > 100 || Weight < 0;
+        public bool Check() => Weight >= 100 || Weight <= 0;
 
         private int GetAge() => Age;
 

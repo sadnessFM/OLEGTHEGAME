@@ -19,7 +19,7 @@ namespace nynaynayyanyanynaynanyanynaynay
             UpdateOLEG();
 
             if (Checked != true)
-                FormHelper.PlaySimpleSound(@path2);
+                FormHelper.PlaySound(Checked, @"C:\Users\ArtSt\source\repos\nynaynayyanyanynaynanyanynaynay\dobavka.wav", path);
 
             DeadInside();
         }
@@ -30,7 +30,7 @@ namespace nynaynayyanyanynaynanyanynaynay
             textBox1.Text += cat.Perekur(5);
             UpdateOLEG();
 
-            
+            FormHelper.PlaySound(Checked, @"C:\Users\ArtSt\source\repos\nynaynayyanyanynaynanyanynaynay\net.wav", path);
 
             DeadInside();
         }
@@ -41,7 +41,7 @@ namespace nynaynayyanyanynaynanyanynaynay
         {
             if (cat.Check() == true && Checked == false)
             {
-                FormHelper.PlaySimpleSound(path3);
+                FormHelper.PlaySound(path);
                 pictureBox1.Visible = false;
                 pictureBox2.Visible = true;
                 MessageBox.Show("КОТИК УСЕРЛСЯ", "хуй", MessageBoxButtons.OK, MessageBoxIcon.Error);
@@ -62,11 +62,7 @@ namespace nynaynayyanyanynaynanyanynaynay
             textBox2.Text += cat.OutInfo();
         }
 
-        private readonly string path1 = @"C:\Users\ArtSt\source\repos\nynaynayyanyanynaynanyanynaynay\beebe.wav";
-
-        private readonly string path2 = @"C:\Users\ArtSt\source\repos\nynaynayyanyanynaynanyanynaynay\rehehehe.wav";
-
-        private readonly string path3 = @"C:\Users\ArtSt\source\repos\nynaynayyanyanynaynanyanynaynay\byerk.wav";
+        private readonly string path = @"C:\Users\ArtSt\source\repos\nynaynayyanyanynaynanyanynaynay\byerk.wav";
 
         private bool Checked = false;
 

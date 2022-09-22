@@ -1,5 +1,4 @@
 ﻿using System;
-using System.Media;
 using System.Windows.Forms;
 
 namespace nynaynayyanyanynaynanyanynaynay
@@ -9,15 +8,19 @@ namespace nynaynayyanyanynaynanyanynaynay
         public Bebra()
         {
             InitializeComponent();
-            textBox2.Text += cat.OutInfo();
+            UpdateOLEG();
+            textBox1.Text += "ЛЕВАЯ КОРМИТЬ ПРАВАЯ БИТЬ";
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
             ClearTextBoxes();
             textBox1.Text += cat.Pelmeni(5);
-            PlaySimpleSound(@path2);
-            textBox2.Text += cat.OutInfo();
+            UpdateOLEG();
+
+            if (Checked != true)
+                FormHelper.PlaySimpleSound(@path2);
+
             DeadInside();
         }
 
@@ -25,38 +28,38 @@ namespace nynaynayyanyanynaynanyanynaynay
         {
             ClearTextBoxes();
             textBox1.Text += cat.Perekur(5);
-            PlaySimpleSound(@path1);
-            textBox2.Text += cat.OutInfo();
+            UpdateOLEG();
+
+            
+
             DeadInside();
         }
 
 
-        private void DeadInside()
+
+        public void DeadInside()
         {
-            if (cat.Check() == true)
+            if (cat.Check() == true && Checked == false)
             {
+                FormHelper.PlaySimpleSound(path3);
+                pictureBox1.Visible = false;
+                pictureBox2.Visible = true;
                 MessageBox.Show("КОТИК УСЕРЛСЯ", "хуй", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                PlaySimpleSound(path3);
+                progressBar1.Value = 100 - 7;
+                Checked = true;
             }
         }
 
-        private void PlaySimpleSound(string path)
-        {
-            SoundPlayer soundeffect = new SoundPlayer(path);
-            try
-            {
-                soundeffect.Play();
-            }
-            catch (Exception e)
-            {
-                MessageBox.Show(Convert.ToString(e));
-            }
-        }
-
-        private void ClearTextBoxes()
+        public void ClearTextBoxes()
         {
             textBox1.Text = "";
             textBox2.Text = "";
+        }
+
+        public void UpdateOLEG()
+        {
+            progressBar1.Value = cat.GetWeight();
+            textBox2.Text += cat.OutInfo();
         }
 
         private readonly string path1 = @"C:\Users\ArtSt\source\repos\nynaynayyanyanynaynanyanynaynay\beebe.wav";
@@ -64,6 +67,8 @@ namespace nynaynayyanyanynaynanyanynaynay
         private readonly string path2 = @"C:\Users\ArtSt\source\repos\nynaynayyanyanynaynanyanynaynay\rehehehe.wav";
 
         private readonly string path3 = @"C:\Users\ArtSt\source\repos\nynaynayyanyanynaynanyanynaynay\byerk.wav";
+
+        private bool Checked = false;
 
         private readonly KOSHAK cat = new KOSHAK(14, "РУССКИЙ НАЦИОНАЛИСТ", "OLEG");
     }

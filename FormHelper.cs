@@ -13,7 +13,7 @@ namespace nynaynayyanyanynaynanyanynaynay
             {
                 soundeffect.Play();
             }
-            catch(Exception e)
+            catch (Exception e)
             {
                 CatchError(e);
             }
@@ -29,13 +29,13 @@ namespace nynaynayyanyanynaynanyanynaynay
                 else
                     PlaySound(FailPath);
             }
-            catch(Exception e)
+            catch (Exception e)
             {
                 CatchError(e);
             }
         }
 
-        private static void CatchError(Exception e) => MessageBox.Show(Convert.ToString(e), "ERROR", 
+        public static void CatchError(Exception e) => MessageBox.Show(Convert.ToString(e), "ERROR",
             MessageBoxButtons.OK, MessageBoxIcon.Error);
     }
 }

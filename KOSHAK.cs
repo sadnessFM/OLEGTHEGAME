@@ -54,9 +54,9 @@
 
         private string Gender { get; }
 
-        private string Name { get; }
+        private string Name { get; set; }
 
-        private int Age { get; }
+        private int Age { get; set; }
     }
 }
 

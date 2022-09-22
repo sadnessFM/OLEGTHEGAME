@@ -13,7 +13,8 @@ namespace nynaynayyanyanynaynanyanynaynay
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Bebra());
+            Application.Run(new CREATE());
+
         }
     }
 }

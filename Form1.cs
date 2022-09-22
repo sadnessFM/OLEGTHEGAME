@@ -66,6 +66,6 @@ namespace nynaynayyanyanynaynanyanynaynay
 
         private bool Checked = false;
 
-        private readonly KOSHAK cat = new KOSHAK(14, "РУССКИЙ НАЦИОНАЛИСТ", "OLEG");
+        private readonly KOSHAK cat = new KOSHAK(ControlID.catAge, ControlID.catGender, ControlID.catName);
     }
 }

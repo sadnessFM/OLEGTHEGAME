@@ -19,7 +19,7 @@ namespace nynaynayyanyanynaynanyanynaynay
             UpdateOLEG();
 
             if (Checked != true)
-                FormHelper.PlaySound(Checked, @"C:\Users\ArtSt\source\repos\nynaynayyanyanynaynanyanynaynay\dobavka.wav", path);
+                FormHelper.PlaySound(Checked, @"C:\Users\ArtSt\source\repos\nynaynayyanyanynaynanyanynaynay\picsounds\dobavka.wav", path);
 
             DeadInside();
         }
@@ -30,30 +30,30 @@ namespace nynaynayyanyanynaynanyanynaynay
             textBox1.Text += cat.Perekur(5);
             UpdateOLEG();
 
-            FormHelper.PlaySound(Checked, @"C:\Users\ArtSt\source\repos\nynaynayyanyanynaynanyanynaynay\net.wav", path);
+            FormHelper.PlaySound(Checked, @"C:\Users\ArtSt\source\repos\nynaynayyanyanynaynanyanynaynay\picsounds\net.wav", path);
 
             DeadInside();
         }
 
 
 
+        public void ClearTextBoxes()
+        {
+            textBox1.Text = "";
+            textBox2.Text = "";
+        }
+
         public void DeadInside()
         {
             if (cat.Check() == true && Checked == false)
             {
                 FormHelper.PlaySound(path);
-                pictureBox1.Visible = false;
+                pictureBox1.Dispose();
                 pictureBox2.Visible = true;
                 MessageBox.Show("КОТИК УСЕРЛСЯ", "хуй", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 progressBar1.Value = 100 - 7;
                 Checked = true;
             }
-        }
-
-        public void ClearTextBoxes()
-        {
-            textBox1.Text = "";
-            textBox2.Text = "";
         }
 
         public void UpdateOLEG()
@@ -62,7 +62,7 @@ namespace nynaynayyanyanynaynanyanynaynay
             textBox2.Text += cat.OutInfo();
         }
 
-        private readonly string path = @"C:\Users\ArtSt\source\repos\nynaynayyanyanynaynanyanynaynay\byerk.wav";
+        private readonly string path = @"C:\Users\ArtSt\source\repos\nynaynayyanyanynaynanyanynaynay\picsounds\byerk.wav";
 
         private bool Checked = false;
 

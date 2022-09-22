@@ -4,13 +4,19 @@ using System.Windows.Forms;
 
 namespace nynaynayyanyanynaynanyanynaynay
 {
-    internal class FormHelper : Bebra
+    public class FormHelper : Bebra
     {
-
         public static void PlaySound(string path)
         {
             SoundPlayer soundeffect = new SoundPlayer(path);
-            soundeffect.Play();
+            try
+            {
+                soundeffect.Play();
+            }
+            catch(Exception e)
+            {
+                CatchError(e);
+            }
         }
 
         public static void PlaySound(bool check, string path, string FailPath)
@@ -31,12 +37,5 @@ namespace nynaynayyanyanynaynanyanynaynay
 
         private static void CatchError(Exception e) => MessageBox.Show(Convert.ToString(e), "ERROR", 
             MessageBoxButtons.OK, MessageBoxIcon.Error);
-        /*
-        public void ClearTextBoxes()
-        {
-            textBox1.Text = "";
-            textBox2.Text = "";
-        }
-        */
     }
 }

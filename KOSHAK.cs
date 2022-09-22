@@ -13,7 +13,7 @@
         public string Pelmeni(int kolvozhratva)
         {
             if (Check())
-                return $"{Name} ЕБАНУЛИ ДЕЗОЛЯТОРОМ 1000-7 Я УМЕР ПРОZТИ";
+                return "КОТ УМЕР ОТ ОЖИРЕНИЯ";
 
             else
             {
@@ -27,18 +27,18 @@
         public string Perekur(int amount)
         {
             if (Check())
-                return $"{Name} ЕБАНУЛИ ДЕЗОЛЯТОРОМ 1000-7 Я УМЕР ПРОZТИ";
+                return "КОТ УМЕР ОТ РАКА ЛЕГКИХ";
 
             else
             {
                 Weight -= amount;
-                return $"{Name} антипоел на {amount} тонн";
+                return $"котик антипоел на {amount} тонн";
             }
         }
 
 
 
-        public string OutInfo() => $"{GetName()}, {GetAge()} лет, {GetGender()}, {GetWeight()} тонн";
+        public string OutInfo() => $"{GetName()}, {GetAge()}, {GetGender()}, {GetWeight()} тонн";
 
         public bool Check() => Weight >= 100 || Weight <= 0;
 
@@ -48,7 +48,7 @@
 
         private string GetGender() => Gender;
 
-        public int GetWeight() => Weight;
+        private int GetWeight() => Weight;
 
         private int Weight { get; set; }
 

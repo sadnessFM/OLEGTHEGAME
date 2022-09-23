@@ -58,7 +58,7 @@ namespace nynaynayyanyanynaynanyanynaynay
 
         public void UpdateOLEG()
         {
-            progressBar1.Value = cat.GetWeight();
+            progressBar1.Value = cat.Weight;
             textBox2.Text += cat.OutInfo();
         }
 

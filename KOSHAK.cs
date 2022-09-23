@@ -42,12 +42,9 @@
 
         public bool Check() => Weight >= 1000 || Weight <= 0;
 
-        private int Weight { get; set; }
-
+        public int Weight { get; set; }
         private string Gender { get; }
-
         private string Name { get; set; }
-
         private int Age { get; set; }
     }
 }

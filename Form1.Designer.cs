@@ -39,6 +39,7 @@ namespace nynaynayyanyanynaynanyanynaynay
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.progressBar1 = new System.Windows.Forms.ProgressBar();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.GAME = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
@@ -116,17 +117,27 @@ namespace nynaynayyanyanynaynanyanynaynay
             this.pictureBox2.Location = new System.Drawing.Point(468, 13);
             this.pictureBox2.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(488, 299);
+            this.pictureBox2.Size = new System.Drawing.Size(488, 396);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox2.TabIndex = 6;
             this.pictureBox2.TabStop = false;
             this.pictureBox2.Visible = false;
             // 
+            // GAME
+            // 
+            this.GAME.Location = new System.Drawing.Point(166, 308);
+            this.GAME.Name = "GAME";
+            this.GAME.Size = new System.Drawing.Size(120, 69);
+            this.GAME.TabIndex = 7;
+            this.GAME.Text = "ИГРАТЬ С ХУЕСОСОМ";
+            this.GAME.UseVisualStyleBackColor = true;
+            // 
             // Bebra
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(976, 329);
+            this.ClientSize = new System.Drawing.Size(976, 422);
+            this.Controls.Add(this.GAME);
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.progressBar1);
             this.Controls.Add(this.textBox2);
@@ -155,6 +166,7 @@ namespace nynaynayyanyanynaynanyanynaynay
         private System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.ProgressBar progressBar1;
         private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.Button GAME;
     }
 }
 

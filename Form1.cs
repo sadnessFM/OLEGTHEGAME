@@ -30,7 +30,9 @@ namespace nynaynayyanyanynaynanyanynaynay
             textBox1.Text += cat.Perekur(50);
             UpdateOLEG();
 
-            FormHelper.PlaySound(Checked, @"C:\Users\ArtSt\source\repos\nynaynayyanyanynaynanyanynaynay\picsounds\net.wav", path);
+            if (Checked != true)
+                FormHelper.PlaySound(Checked, 
+                    @"C:\Users\ArtSt\source\repos\nynaynayyanyanynaynanyanynaynay\picsounds\net.wav", path);
 
             DeadInside();
         }
@@ -51,14 +53,14 @@ namespace nynaynayyanyanynaynanyanynaynay
                 pictureBox1.Dispose();
                 pictureBox2.Visible = true;
                 MessageBox.Show("КОТИК УСЕРЛСЯ", "хуй", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                progressBar1.Value = 1000 - 7;
+                progressBar1.Value = (1000 - 7)/10 ;
                 Checked = true;
             }
         }
 
         public void UpdateOLEG()
         {
-            progressBar1.Value = cat.Weight;
+            progressBar1.Value = cat.Weight/10;
             textBox2.Text += cat.OutInfo();
         }
 

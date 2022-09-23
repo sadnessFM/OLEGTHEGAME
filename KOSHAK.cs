@@ -7,7 +7,7 @@
             Age = age;
             Gender = gender;
             Name = name;
-            Weight = 500;
+            Weight = 50;
         }
 
         public string Pelmeni(int kolvozhratva)

@@ -23,8 +23,7 @@ namespace nynaynayyanyanynaynanyanynaynay
             {
                 FormHelper.CatchError(error);
             }
-            //Bebra sec = new Bebra();
-            //sec.Activate();
+            Close();
         }
 
         private string SetName(string s) => ControlID.catName = s;

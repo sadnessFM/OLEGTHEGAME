@@ -15,7 +15,7 @@ namespace nynaynayyanyanynaynanyanynaynay
         private void button1_Click(object sender, EventArgs e)
         {
             ClearTextBoxes();
-            textBox1.Text += cat.Pelmeni(5);
+            textBox1.Text += cat.Pelmeni(50);
             UpdateOLEG();
 
             if (Checked != true)
@@ -27,7 +27,7 @@ namespace nynaynayyanyanynaynanyanynaynay
         private void Button2_Click(object sender, EventArgs e)
         {
             ClearTextBoxes();
-            textBox1.Text += cat.Perekur(5);
+            textBox1.Text += cat.Perekur(50);
             UpdateOLEG();
 
             FormHelper.PlaySound(Checked, @"C:\Users\ArtSt\source\repos\nynaynayyanyanynaynanyanynaynay\picsounds\net.wav", path);
@@ -51,7 +51,7 @@ namespace nynaynayyanyanynaynanyanynaynay
                 pictureBox1.Dispose();
                 pictureBox2.Visible = true;
                 MessageBox.Show("КОТИК УСЕРЛСЯ", "хуй", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                progressBar1.Value = 100 - 7;
+                progressBar1.Value = 1000 - 7;
                 Checked = true;
             }
         }

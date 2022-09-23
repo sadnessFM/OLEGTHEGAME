@@ -7,7 +7,7 @@
             Age = age;
             Gender = gender;
             Name = name;
-            Weight = 50;
+            Weight = 500;
         }
 
         public string Pelmeni(int kolvozhratva)
@@ -20,7 +20,7 @@
                 Weight += kolvozhratva;
                 return Check()
                     ? $"{Name} НАЕЛСЯ СНЮСИКА ГРОМКО ПУКНУЛ. ТЫ ПЛОХОЙ БУРАНЬЮЮ"
-                    : $"{Name} НАЕЛСЯ {kolvozhratva} СНЮСИКА ГРОМКО ПУКНУЛ";
+                    : $"{Name} НАЕЛСЯ {kolvozhratva / 10} СНЮСИКА ГРОМКО ПУКНУЛ";
             }
         }
 
@@ -32,23 +32,15 @@
             else
             {
                 Weight -= amount;
-                return $"{Name} антипоел на {amount} тонн";
+                return $"{Name} антипоел на {amount / 10} тонн";
             }
         }
 
 
 
-        public string OutInfo() => $"{GetName()}, {GetAge()} лет, {GetGender()}, {GetWeight()} тонн";
+        public string OutInfo() => $"{Name}, {Age} лет, {Gender}, {Weight/10} тонн";
 
-        public bool Check() => Weight >= 100 || Weight <= 0;
-
-        private int GetAge() => Age;
-
-        private string GetName() => Name;
-
-        private string GetGender() => Gender;
-
-        public int GetWeight() => Weight;
+        public bool Check() => Weight >= 1000 || Weight <= 0;
 
         private int Weight { get; set; }
 
@@ -67,5 +59,9 @@
  *— А что такое, рук нету пришить?
  *
  * В израильской армии можно не только отвечать вопросом на вопрос, но и спрашивать ответом на ответ.
+ * 
+ * Мама спрашивает Вовочку: 
+ * — В буфете было два куска торта, а сейчас один; можешь ты это обьяснить? 
+ * — Кончно! Было темно и я не заметил второй кусок! 
  * 
 */

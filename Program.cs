@@ -14,7 +14,7 @@ namespace nynaynayyanyanynaynanyanynaynay
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new CREATE());
-
+            Application.Run(new Bebra());
         }
     }
 }

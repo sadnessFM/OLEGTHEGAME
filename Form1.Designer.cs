@@ -131,6 +131,7 @@ namespace nynaynayyanyanynaynanyanynaynay
             this.GAME.TabIndex = 7;
             this.GAME.Text = "ИГРАТЬ С ХУЕСОСОМ";
             this.GAME.UseVisualStyleBackColor = true;
+            this.GAME.Click += new System.EventHandler(this.GAME_Click);
             // 
             // Bebra
             // 

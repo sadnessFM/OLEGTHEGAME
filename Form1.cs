@@ -14,34 +14,40 @@ namespace nynaynayyanyanynaynanyanynaynay
 
         private void button1_Click(object sender, EventArgs e)
         {
-            ClearTextBoxes();
+            FormHelper.ClearTextBoxes(textBox1, textBox2);
             textBox1.Text += cat.Pelmeni(50);
             UpdateOLEG();
 
             if (Checked != true)
-                FormHelper.PlaySound(Checked, @"C:\Users\ArtSt\source\repos\nynaynayyanyanynaynanyanynaynay\picsounds\dobavka.wav", path);
+                FormHelper.PlaySound(Checked, 
+                    @"C:\Users\ArtSt\source\repos\nynaynayyanyanynaynanyanynaynay\picsounds\dobavka.wav", path);
 
             DeadInside();
         }
 
         private void Button2_Click(object sender, EventArgs e)
         {
-            ClearTextBoxes();
+            FormHelper.ClearTextBoxes(textBox1, textBox2);
             textBox1.Text += cat.Perekur(50);
             UpdateOLEG();
 
-            FormHelper.PlaySound(Checked, @"C:\Users\ArtSt\source\repos\nynaynayyanyanynaynanyanynaynay\picsounds\net.wav", path);
+            if (Checked != true)
+                FormHelper.PlaySound(Checked, 
+                    @"C:\Users\ArtSt\source\repos\nynaynayyanyanynaynanyanynaynay\picsounds\net.wav", path);
 
             DeadInside();
         }
 
-
-
-        public void ClearTextBoxes()
+        private void GAME_Click(object sender, EventArgs e)
         {
-            textBox1.Text = "";
-            textBox2.Text = "";
+            //using (CREATE sec = new CREATE())
+            //{
+            //
+            //}
         }
+
+
+
 
         public void DeadInside()
         {
@@ -51,14 +57,14 @@ namespace nynaynayyanyanynaynanyanynaynay
                 pictureBox1.Dispose();
                 pictureBox2.Visible = true;
                 MessageBox.Show("КОТИК УСЕРЛСЯ", "хуй", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                progressBar1.Value = 1000 - 7;
+                progressBar1.Value = (1000 - 7)/10 ;
                 Checked = true;
             }
         }
 
-        public void UpdateOLEG()
+        private void UpdateOLEG()
         {
-            progressBar1.Value = cat.Weight;
+            progressBar1.Value = cat.Weight/10;
             textBox2.Text += cat.OutInfo();
         }
 
@@ -67,5 +73,6 @@ namespace nynaynayyanyanynaynanyanynaynay
         private bool Checked = false;
 
         private readonly KOSHAK cat = new KOSHAK(ControlID.catAge, ControlID.catGender, ControlID.catName);
+
     }
 }

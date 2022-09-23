@@ -35,6 +35,12 @@ namespace nynaynayyanyanynaynanyanynaynay
             }
         }
 
+        public static void ClearTextBoxes(TextBox box1, TextBox box2)
+        {
+            box1.Text = "";
+            box2.Text = "";
+        }
+
         public static void CatchError(Exception e) => MessageBox.Show(Convert.ToString(e), "ERROR",
             MessageBoxButtons.OK, MessageBoxIcon.Error);
     }

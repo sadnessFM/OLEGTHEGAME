@@ -57,14 +57,14 @@ namespace nynaynayyanyanynaynanyanynaynay
                 pictureBox1.Dispose();
                 pictureBox2.Visible = true;
                 MessageBox.Show("КОТИК УСЕРЛСЯ", "хуй", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                progressBar1.Value = (1000 - 7)/10 ;
+                progressBar1.Value = (1000 - 7) / 10 ;
                 Checked = true;
             }
         }
 
         private void UpdateOLEG()
         {
-            progressBar1.Value = cat.Weight/10;
+            progressBar1.Value = cat.Weight / 10;
             textBox2.Text += cat.OutInfo();
         }
 

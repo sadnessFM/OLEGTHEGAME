@@ -12,24 +12,20 @@ namespace nynaynayyanyanynaynanyanynaynay
 
         private void button1_Click(object sender, EventArgs e)
         {
+            ControlID.catName = textBox1.Text;
+            //TODO: вместо этой хуиты сделать проверку на число в боксах
             try
             {
-                SetName(textBox1.Text);
-                SetAge(textBox2.Text);
-                SetGender(textBox3.Text);
+                ControlID.catAge = Convert.ToInt32(textBox2.Text);
             }
-
-            catch (Exception error)
+            catch(Exception error)
             {
                 FormHelper.CatchError(error);
             }
+            ControlID.catGender = textBox3.Text;
+
             Close();
         }
-
-        private string SetName(string s) => ControlID.catName = s;
-        private int SetAge(string s) => ControlID.catAge = Convert.ToInt32(s);
-        private string SetGender(string s) => ControlID.catGender = s;
-
     }
 
     public class ControlID

@@ -13,21 +13,19 @@
         public string Pelmeni(int kolvozhratva)
         {
             if (Check())
-                return $"{Name} ЕБАНУЛИ ДЕЗОЛЯТОРОМ 1000-7 Я УМЕР ПРОZТИ";
+                return desoldeath(Name);
 
             else
             {
                 Weight += kolvozhratva;
-                return Check()
-                    ? $"{Name} НАЕЛСЯ СНЮСИКА ГРОМКО ПУКНУЛ. ТЫ ПЛОХОЙ БУРАНЬЮЮ"
-                    : $"{Name} НАЕЛСЯ {kolvozhratva / 10} СНЮСИКА ГРОМКО ПУКНУЛ";
+                return $"{Name} НАЕЛСЯ {kolvozhratva / 10} СНЮСИКА ГРОМКО ПУКНУЛ";
             }
         }
 
         public string Perekur(int amount)
         {
             if (Check())
-                return $"{Name} ЕБАНУЛИ ДЕЗОЛЯТОРОМ 1000-7 Я УМЕР ПРОZТИ";
+                return desoldeath(Name);
 
             else
             {
@@ -39,11 +37,11 @@
 
 
         public string OutInfo() => $"{Name}, {Age} лет, {Gender}, {Weight/10} тонн";
-
         public bool Check() => Weight >= 1000 || Weight <= 0;
+        private string desoldeath(string catName) => $"{catName} ЕБАНУЛИ ДЕЗОЛЯТОРОМ 1000-7 Я УМЕР ПРОZТИ";
 
         public int Weight { get; set; }
-        private string Gender { get; }
+        private string Gender { get; set; }
         private string Name { get; set; }
         private int Age { get; set; }
     }
